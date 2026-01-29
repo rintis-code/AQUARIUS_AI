@@ -1,1 +1,17 @@
-
+{
+  "project": "AQUARIUS_AI_V1",
+  "location": "Bengawan Solo Basin, Indonesia",
+  "timestamp": "2024-05-20 14:30:00",
+  "simulation": {
+    "source": "HEC-HMS Engine",
+    "unit": "m3/s",
+    "time": ["00:00", "02:00", "04:00", "06:00", "08:00", "10:00", "12:00", "14:00"],
+    "discharge": [12.5, 15.8, 22.1, 45.3, 89.7, 120.5, 95.2, 60.1],
+    "rainfall": [2.1, 5.5, 12.0, 35.2, 18.0, 4.2, 1.0, 0.0]
+  },
+  "sensor_status": {
+    "gandekan_gate": "ALERT",
+    "upstream_station": "NORMAL",
+    "satellite_gpm": "ACTIVE"
+  }
+}
