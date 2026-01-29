@@ -3,132 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aqua_v1 - Smart Water Management</title>
+    <title>AQUARIUS AI - Sustainable Water Management Agent</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap');
+
         body {
-            background-color: #f8fafc;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle at center, #001d3d 0%, #000814 100%);
+            color: #e0f2fe;
+            font-family: 'Rajdhani', sans-serif;
+            overflow-x: hidden;
+            min-height: 100vh;
         }
-        .header-gradient {
-            background: linear-gradient(to right, #1e3a8a, #3b82f6);
+
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
         }
-        .card-ideal { border-top: 4px solid #10b981; }
-        .card-problem { border-top: 4px solid #ef4444; }
-        .status-bar { background: #e2e8f0; border-radius: 10px; overflow: hidden; }
-        .status-fill { background: #3b82f6; height: 10px; }
+
+        .neon-text {
+            text-shadow: 0 0 10px #00b4d8, 0 0 20px #00b4d8;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .glow-border {
+            box-shadow: 0 0 15px rgba(0, 180, 216, 0.4);
+            border: 1px solid rgba(0, 180, 216, 0.6);
+        }
+
+        .ai-pulse {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; box-shadow: 0 0 30px #00b4d8; }
+            100% { transform: scale(1); opacity: 0.8; }
+        }
+
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
     </style>
 </head>
-<body class="p-6">
+<body class="p-4 md:p-8">
 
-    <header class="header-gradient text-white p-4 rounded-lg shadow-lg mb-8">
-        <div class="flex justify-between items-center">
-            <div>
-                <h1 class="text-xl font-bold uppercase tracking-widest">DIGITAL – SPASIAL – REAL-TIME – KOLABORATIF</h1>
-                <p class="text-sm opacity-90">CERDAS, ADIL, EFISIEN, BERKELANJUTAN</p>
-            </div>
-            <div class="text-right">
-                <span class="bg-white text-blue-800 px-3 py-1 rounded-full font-bold text-xs">AQUA_V1</span>
+    <header class="flex flex-col md:flex-row justify-between items-center mb-12">
+        <div class="mb-4 md:mb-0 text-center md:text-left">
+            <h1 class="text-4xl font-bold neon-text tracking-widest">AQUARIUS AI</h1>
+            <p class="text-cyan-400 uppercase tracking-tighter">Sustainable Water Management Intelligent Agent</p>
+        </div>
+        <div class="flex gap-4">
+            <div class="glass px-6 py-2 flex items-center gap-2 glow-border">
+                <span class="w-2 h-2 bg-green-500 rounded-full animate-ping"></span>
+                <span>SYSTEM ONLINE: SURAKARTA HUB</span>
             </div>
         </div>
     </header>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <main class="grid grid-cols-1 lg:grid-cols-12 gap-6">
         
-        <section class="space-y-4">
-            <h2 class="text-2xl font-bold text-green-700 flex items-center">
-                <span class="mr-2">🟢</span> Kondisi yang Diinginkan: SWM
-            </h2>
-            
-            <div class="grid grid-cols-1 gap-3">
-                <div class="bg-white p-4 rounded shadow card-ideal">
-                    <h3 class="font-bold text-blue-900">1. Teknologi Digital</h3>
-                    <p class="text-sm text-gray-600">Teknologi digital terkini yang interoperable dan terstandardisasi.</p>
+        <div class="lg:col-span-4 flex flex-col gap-6">
+            <div class="glass p-8 flex flex-col items-center justify-center relative overflow-hidden h-[400px]">
+                <div class="absolute inset-0 opacity-10">
+                    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="40" stroke="white" stroke-width="0.5" fill="none" />
+                    </svg>
                 </div>
-
-                <div class="bg-white p-4 rounded shadow card-ideal">
-                    <h3 class="font-bold text-blue-900">2. Sistem Informasi Spasial</h3>
-                    <p class="text-sm text-gray-600">Integrasi data SDA berbasis spasial untuk akurasi dan pemahaman lebih baik.</p>
+                <div class="w-48 h-48 rounded-full border-4 border-cyan-500 ai-pulse flex items-center justify-center bg-cyan-900/20 floating">
+                    <i class="fas fa-microchip text-6xl text-cyan-400"></i>
                 </div>
-
-                <div class="bg-white p-4 rounded shadow card-ideal">
-                    <h3 class="font-bold text-blue-900">3. Sensor Pemantauan Real-time</h3>
-                    <p class="text-sm text-gray-600">Data dan informasi langsung/terkini untuk membantu pengambilan keputusan.</p>
-                </div>
-
-                <div class="bg-white p-4 rounded shadow card-ideal">
-                    <h3 class="font-bold text-blue-900">4. Berbagi Data – Kolaboratif</h3>
-                    <p class="text-sm text-gray-600">Berbagi data lintas sektor untuk efisiensi pengelolaan data dan informasi SDA.</p>
-                </div>
-
-                <div class="bg-white p-4 rounded shadow card-ideal">
-                    <h3 class="font-bold text-blue-900">5. Analisis – Perencanaan</h3>
-                    <p class="text-sm text-gray-600">Pemanfaatan digital twin untuk mendukung perencanaan strategis dan operasional.</p>
-                </div>
-
-                <div class="bg-white p-4 rounded shadow card-ideal">
-                    <h3 class="font-bold text-blue-900">6. Operasi</h3>
-                    <p class="text-sm text-gray-600">Meningkatkan efisiensi operasional dalam pengelolaan SDA.</p>
-                </div>
-
-                <div class="bg-white p-4 rounded shadow card-ideal">
-                    <h3 class="font-bold text-blue-900">7. Pengambilan Keputusan</h3>
-                    <p class="text-sm text-gray-600">Keputusan efektif, efisien, adil, dan berkelanjutan secara cepat berbasis bukti.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="space-y-4">
-            <h2 class="text-2xl font-bold text-red-600 flex items-center">
-                <span class="mr-2">🔴</span> Kondisi Saat Ini (GAP)
-            </h2>
-
-            <div class="bg-red-50 p-6 rounded-lg border border-red-200">
-                <h3 class="font-bold mb-4 text-red-800 uppercase text-center">Permasalahan Penerapan SWM</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div class="p-3 bg-white rounded shadow-sm card-problem">
-                        <p class="text-xs font-bold text-red-500">Infrastruktur Digital Terbatas</p>
-                        <p class="text-[11px]">Akuisisi data real-time terhambat.</p>
-                    </div>
-                    <div class="p-3 bg-white rounded shadow-sm card-problem">
-                        <p class="text-xs font-bold text-red-500">Data & Informasi Terfragmentasi</p>
-                        <p class="text-[11px]">Akuisisi data real-time terhambat.</p>
-                    </div>
-                    <div class="p-3 bg-white rounded shadow-sm card-problem">
-                        <p class="text-xs font-bold text-red-500">Data Spasial Tidak Konsisten</p>
-                        <p class="text-[11px]">Integrasi dan analisis sulit dilakukan.</p>
-                    </div>
-                    <div class="p-3 bg-white rounded shadow-sm card-problem">
-                        <p class="text-xs font-bold text-red-500">Tata Kelola Kolaboratif Lemah</p>
-                        <p class="text-[11px]">Pendekatan manajemen holistik kurang.</p>
-                    </div>
-                    <div class="p-3 bg-white rounded shadow-sm card-problem">
-                        <p class="text-xs font-bold text-red-500">SDM Terbatas</p>
-                        <p class="text-[11px]">Menghambat adopsi teknologi dan literasi.</p>
-                    </div>
-                    <div class="p-3 bg-white rounded shadow-sm card-problem">
-                        <p class="text-xs font-bold text-red-500">Model Pendanaan Tidak Aman</p>
-                        <p class="text-[11px]">Operasional sistem tidak berkelanjutan.</p>
-                    </div>
+                <div class="mt-8 text-center">
+                    <p class="text-xl font-bold italic">"Ready to bridge the GAP."</p>
+                    <p class="text-sm text-gray-400">Analytic Engine: Active</p>
                 </div>
             </div>
 
-            <div class="mt-8 p-6 bg-blue-900 text-white rounded-xl shadow-2xl relative overflow-hidden">
-                <div class="relative z-10">
-                    <h3 class="text-center font-bold text-lg mb-2 italic tracking-widest">BRIDGE THE GAP</h3>
-                    <div class="status-bar mt-4">
-                        <div class="status-fill" style="width: 40%;"></div>
+            <div class="glass p-6">
+                <h3 class="text-cyan-400 mb-4 font-bold uppercase"><i class="fas fa-database mr-2"></i> Real-time Monitoring</h3>
+                <div class="space-y-3">
+                    <div class="flex justify-between text-sm">
+                        <span>Water Level (Gandean Gate)</span>
+                        <span class="text-yellow-400">3.2m (Alert)</span>
                     </div>
-                    <p class="text-[10px] mt-2 text-center opacity-70 italic font-mono">Transforming Current State to Sustainable State...</p>
+                    <div class="w-full bg-gray-700 h-1 rounded-full">
+                        <div class="bg-yellow-400 h-1 rounded-full" style="width: 75%"></div>
+                    </div>
                 </div>
-                <div class="absolute top-0 right-0 w-24 h-24 bg-blue-500 rounded-full blur-3xl opacity-20"></div>
             </div>
-        </section>
-    </div>
+        </div>
 
-    <footer class="mt-8 text-center text-gray-500 text-xs">
-        <p>Pengelolaan SDA yang <strong>Cerdas – Adil – Efisien – Berkelanjutan</strong></p>
-        <p class="mt-1">aqua_v1 | Prototype for GitHub</p>
+        <div class="lg:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="glass p-6 hover:bg-cyan-900/20 transition-all cursor-pointer border-l-4 border-cyan-500">
+                <i class="fas fa-layer-group text-2xl text-cyan-400 mb-3"></i>
+                <h4 class="font-bold text-lg mb-1">Spatial Information System</h4>
+                <p class="text-sm text-gray-400">Integrasi data SDA berbasis geospasial untuk akurasi presisi tinggi.</p>
+            </div>
+
+            <div class="glass p-6 hover:bg-cyan-900/20 transition-all cursor-pointer border-l-4 border-blue-500">
+                <i class="fas fa-satellite-dish text-2xl text-blue-400 mb-3"></i>
+                <h4 class="font-bold text-lg mb-1">Real-time Sensors</h4>
+                <p class="text-sm text-gray-400">Akuisisi data instan dari sensor IoT di sepanjang aliran sungai.</p>
+            </div>
+
+            <div class="glass p-6 hover:bg-cyan-900/20 transition-all cursor-pointer border-l-4 border-purple-500">
+                <i class="fas fa-clone text-2xl text-purple-400 mb-3"></i>
+                <h4 class="font-bold text-lg mb-1">Digital Twin Analysis</h4>
+                <p class="text-sm text-gray-400">Pemodelan simulasi untuk perencanaan operasional & mitigasi banjir.</p>
+            </div>
+
+            <div class="glass p-6 hover:bg-cyan-900/20 transition-all cursor-pointer border-l-4 border-green-500">
+                <i class="fas fa-users-cog text-2xl text-green-400 mb-3"></i>
+                <h4 class="font-bold text-lg mb-1">Collaborative Data Sharing</h4>
+                <p class="text-sm text-gray-400">Platform lintas sektor untuk efisiensi pengelolaan data SDA.</p>
+            </div>
+
+            <div class="md:col-span-2 glass p-6 bg-gradient-to-r from-cyan-900/30 to-transparent">
+                <h3 class="text-2xl font-bold mb-4 neon-text">DECISION SUPPORT SYSTEM</h3>
+                <div class="flex flex-wrap gap-4">
+                    <button class="bg-cyan-600 hover:bg-cyan-500 px-6 py-2 rounded-lg font-bold transition-all">
+                        RUN FLOOD SIMULATION
+                    </button>
+                    <button class="border border-cyan-500 hover:bg-cyan-900/50 px-6 py-2 rounded-lg font-bold transition-all">
+                        VIEW SPATIAL MAP
+                    </button>
+                    <button class="border border-red-500/50 text-red-400 px-6 py-2 rounded-lg font-bold hover:bg-red-900/20 transition-all">
+                        GATE CONTROL (SOP)
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="text-center p-4 glass glow-border">
+            <p class="text-xs text-cyan-400 uppercase">Vision</p>
+            <p class="font-bold">CERDAS</p>
+        </div>
+        <div class="text-center p-4 glass glow-border">
+            <p class="text-xs text-cyan-400 uppercase">Equity</p>
+            <p class="font-bold">ADIL</p>
+        </div>
+        <div class="text-center p-4 glass glow-border">
+            <p class="text-xs text-cyan-400 uppercase">Utility</p>
+            <p class="font-bold">EFISIEN</p>
+        </div>
+        <div class="text-center p-4 glass glow-border">
+            <p class="text-xs text-cyan-400 uppercase">Impact</p>
+            <p class="font-bold">BERKELANJUTAN</p>
+        </div>
     </footer>
 
 </body>
